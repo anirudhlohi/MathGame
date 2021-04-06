@@ -28,9 +28,10 @@ button_check = "<br><br><button type='button' class='btn btn-info' onclick='chec
 row = question + input_box + button_check
 document.getElementById("output").innerHTML = row
 }
+question_turn = "player1"
+answer_turn = "player2"
 function check(){
-    question_turn = "player1"
-    answer_turn = "player2"
+   
     get_answer = document.getElementById("get_a").value;
     document.getElementById("output").innerHTML = ""
     if (get_answer == actual_ans){
@@ -53,10 +54,10 @@ function check(){
         
     }
     else{
-        question_turn = "player2"
+        question_turn = "player1"
         answer_turn = "player2"
-        document.getElementById("player_qu").innerHTML = "Question turn-" +player2_name
-        document.getElementById("player_ans").innerHTML ="Answer Turn-"+player1_name
+        document.getElementById("player_qu").innerHTML = "Question turn-" +player1_name
+        document.getElementById("player_ans").innerHTML ="Answer Turn-"+player2_name
     }
     
 }
